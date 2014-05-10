@@ -8,7 +8,7 @@ public final class SadariMain {
         Sadari sadari = new SadariBuilder()
                 .height(10)
                 .lineCount(4)
-                .addRandomBridges(10).build();
+                .addRandomBridges().build();
         System.out.println(sadari.draw());
 
         List<Point> path = sadari.getPath(1);

@@ -46,7 +46,7 @@ public class SadariBuilder {
      *
      * <pre>
      * |        |        |        |
-     * |--------|--------|        | <- ?????? ?????? ????????? ?????????!
+     * |--------|--------|        | <- 이런 경우가 있으면 안됨
      * |        |        |        |
      * |        |--------|        |
      * |        |        |--------|
@@ -72,19 +72,22 @@ public class SadariBuilder {
         return false;
     }
 
-    public SadariBuilder addRandomBridges(int bridgeCount) {
+    public SadariBuilder addRandomBridges() {
         final Random rand = new Random();
-        for (int i = 0; i < bridgeCount; i++) {
-            while (true) {
+        int minBridgeCount = lineCount * 2;
+        int creatinCount = rand.nextInt(lineCount * (height - 2)) + minBridgeCount;
+        for (int i = 0; i < creatinCount; i++) {
+            int retryCount = 10;
+            while (retryCount-- > 0) {
                 try {
                     int fromLine = rand.nextInt(lineCount);
                     int toLine = rand.nextInt(lineCount);
                     int positionY = rand.nextInt(height);
                     addBridge(fromLine, toLine, positionY);
-                    // ???????????? ??????????????? ???!
+                    // 만드는데 성공하면, 끝!
                     break;
                 } catch (IllegalArgumentException e) {
-                    // Precondition??? ?????? ????????? ?????? ????????????.
+                    // Precondition에 실패하면 재시도 한다.
                 }
             }
         }
