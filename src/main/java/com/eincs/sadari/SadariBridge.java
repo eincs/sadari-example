@@ -1,6 +1,6 @@
 package com.eincs.sadari;
 
-public class SadariBridge {
+public final class SadariBridge {
     private final Point fromPoint;
     private final Point toPoint;
 

@@ -8,7 +8,8 @@ public final class SadariMain {
         Sadari sadari = new SadariBuilder()
                 .height(10)
                 .lineCount(4)
-                .addRandomBridges().build();
+                .generateBridgesRandomly()
+                .build();
 
         System.out.println("Randomly Generated Ladder:");
         System.out.println(sadari.draw());
