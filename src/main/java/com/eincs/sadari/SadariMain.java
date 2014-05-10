@@ -9,9 +9,12 @@ public final class SadariMain {
                 .height(10)
                 .lineCount(4)
                 .addRandomBridges().build();
+
+        System.out.println("Randomly Generated Ladder:");
         System.out.println(sadari.draw());
 
-        List<Point> path = sadari.getPath(1);
+        System.out.println("Path of First Line:");
+        List<Point> path = sadari.getPath(0);
         for (Point point : path) {
             System.out.println(point);
         }

@@ -13,7 +13,7 @@
 	        Sadari sadari = new SadariBuilder()
 	                .height(10)
 	                .lineCount(4)
-	                .addRandomBridges(10).build();
+	                .addRandomBridges().build();
 	        System.out.println(sadari.draw());
 
 	        List<Point> path = sadari.getPath(1);
@@ -26,31 +26,35 @@
 
 대략적인 출력은 다음과 같습니다.
 
-	|        |        |        |
-	|--------|        |        |
+	Randomly Generated Ladder:
 	|        |        |        |
 	|--------|        |--------|
 	|        |--------|        |
 	|--------|        |--------|
-	|        |        |--------|
-	|        |        |--------|
-	|        |--------|        |
 	|--------|        |        |
+	|        |--------|        |
+	|--------|        |--------|
+	|        |--------|        |
+	|        |--------|        |
+	|        |--------|        |
 	|        |        |        |
 
-	Point{x=1, y=0}
-	Point{x=1, y=1}
+	Path of First Line:
+	Point{x=0, y=0}
 	Point{x=0, y=1}
-	Point{x=0, y=3}
-	Point{x=1, y=3}
-	Point{x=1, y=4}
-	Point{x=2, y=4}
-	Point{x=2, y=5}
-	Point{x=3, y=5}
+	Point{x=1, y=1}
+	Point{x=1, y=2}
+	Point{x=2, y=2}
+	Point{x=2, y=3}
+	Point{x=3, y=3}
 	Point{x=3, y=6}
 	Point{x=2, y=6}
 	Point{x=2, y=7}
-	Point{x=3, y=7}
+	Point{x=1, y=7}
+	Point{x=1, y=8}
+	Point{x=2, y=8}
+	Point{x=2, y=9}
+	Point{x=1, y=9}
 
 ## License
 
