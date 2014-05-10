@@ -1,7 +1,7 @@
 # Sadari Example
 
 매우 간단한 사다리 게임의 자바 구현입니다.
-랜덤하게 사다리를 만들고 특정 
+랜덤하게 사다리를 만들고 특정 라인에서 출발했을때 끝까지 가는 길을 찾아낼 수 있습니다.
 
 ## 이게 뭐죠?
 
@@ -14,8 +14,11 @@
 	                .height(10)
 	                .lineCount(4)
 	                .addRandomBridges().build();
+	        
+	        System.out.println("Randomly Generated Ladder:");
 	        System.out.println(sadari.draw());
 
+	        System.out.println("Path of First Line:");
 	        List<Point> path = sadari.getPath(1);
 	        for (Point point : path) {
 	            System.out.println(point);
