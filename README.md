@@ -7,57 +7,58 @@
 
 다음과 같은 프로그램을 만들면 랜덤하게 사다리를 만들 수 있습니다.
 
-	public final class SadariMain {
+    public final class SadariMain {
 
-	    public static void main(String[] args) {
-	        Sadari sadari = new SadariBuilder()
-	                .height(10)
-	                .lineCount(4)
-	                .addRandomBridges().build();
-	        
-	        System.out.println("Randomly Generated Ladder:");
-	        System.out.println(sadari.draw());
+        public static void main(String[] args) {
+        Sadari sadari = new SadariBuilder()
+                .height(10)
+                .lineCount(4)
+                .generateBridgesRandomly()
+                .build();
 
-	        System.out.println("Path of First Line:");
-	        List<Point> path = sadari.getPath(1);
-	        for (Point point : path) {
-	            System.out.println(point);
-	        }
-	    }
-	}
+        System.out.println("Randomly Generated Ladder:");
+        System.out.println(sadari.draw());
+
+        System.out.println("Path of First Line:");
+            List<Point> path = sadari.getPath(0);
+            for (Point point : path) {
+                System.out.println(point);
+            }
+        }
+    }
 
 
 대략적인 출력은 다음과 같습니다.
 
-	Randomly Generated Ladder:
-	|        |        |        |
-	|--------|        |--------|
-	|        |--------|        |
-	|--------|        |--------|
-	|--------|        |        |
-	|        |--------|        |
-	|--------|        |--------|
-	|        |--------|        |
-	|        |--------|        |
-	|        |--------|        |
-	|        |        |        |
+    Randomly Generated Ladder:
+    |        |        |        |
+    |--------|        |--------|
+    |        |--------|        |
+    |--------|        |--------|
+    |--------|        |        |
+    |        |--------|        |
+    |--------|        |--------|
+    |        |--------|        |
+    |        |--------|        |
+    |        |--------|        |
+    |        |        |        |
 
-	Path of First Line:
-	Point{x=0, y=0}
-	Point{x=0, y=1}
-	Point{x=1, y=1}
-	Point{x=1, y=2}
-	Point{x=2, y=2}
-	Point{x=2, y=3}
-	Point{x=3, y=3}
-	Point{x=3, y=6}
-	Point{x=2, y=6}
-	Point{x=2, y=7}
-	Point{x=1, y=7}
-	Point{x=1, y=8}
-	Point{x=2, y=8}
-	Point{x=2, y=9}
-	Point{x=1, y=9}
+    Path of First Line:
+    Point{x=0, y=0}
+    Point{x=0, y=1}
+    Point{x=1, y=1}
+    Point{x=1, y=2}
+    Point{x=2, y=2}
+    Point{x=2, y=3}
+    Point{x=3, y=3}
+    Point{x=3, y=6}
+    Point{x=2, y=6}
+    Point{x=2, y=7}
+    Point{x=1, y=7}
+    Point{x=1, y=8}
+    Point{x=2, y=8}
+    Point{x=2, y=9}
+    Point{x=1, y=9}
 
 ## License
 
