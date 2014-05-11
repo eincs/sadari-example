@@ -8,7 +8,6 @@
 다음과 같은 프로그램을 만들면 랜덤하게 사다리를 만들 수 있습니다.
 
     public final class SadariMain {
-
         public static void main(String[] args) {
         Sadari sadari = new SadariBuilder()
                 .height(10)
