@@ -3,6 +3,7 @@ package com.eincs.sadari;
 import java.util.List;
 
 public final class SadariMain {
+    private SadariMain() {}
 
     public static void main(String[] args) {
         Sadari sadari = new SadariBuilder()
