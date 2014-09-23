@@ -5,7 +5,6 @@ import com.google.common.collect.ComparisonChain;
 
 public class Point implements Comparable<Point> {
     private int x;
-
     private int y;
 
     public Point(int x, int y) {
